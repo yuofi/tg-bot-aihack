@@ -19,7 +19,11 @@ import uuid
 
 TOKEN = "7714844616:AAH37iobg77Zwe_cg4_CvN20O32Vi-hrGVU"
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", 
+    handlers=[logging.StreamHandler()] 
+)
 
 bot = Bot(token=TOKEN)
 storage = MemoryStorage()
